@@ -1,0 +1,51 @@
+const readline = require('readline');
+const inp = readline.createInterface({
+  input: process.stdin
+});
+const userInput = [];
+inp.on("line", (data) => {
+ userInput.push(data);
+});
+inp.on("close", () => {
+    
+  var k=userInput[0].split(" ");
+
+  var equ = userInput[1].split(" ");
+var out="";
+var m=0;
+var a=[];
+for(var i=0;i<equ.length;i++)
+{
+
+if(equ.length-1!=i)
+{
+a.push(equ[m+1]-equ[m])    
+}
+else
+{
+  a.push(equ[0]-equ[i])   
+}
+m++;
+}
+
+var b=[]
+for(var j=0;j<a.length;j++)
+{
+    unsigned_value = Math.abs(a[j]);
+if(k[1]<unsigned_value)
+{
+    b.push("1");
+}
+else{
+    b.push("0");
+}
+}
+
+console.log(b.toString());
+
+var o=b;
+
+console.log(b.join(" "))
+
+
+});
